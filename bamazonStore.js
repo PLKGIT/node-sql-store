@@ -1,19 +1,25 @@
 // bamazonStore.js
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
 
 // Set Max Listeners value
 //-----------------------------------------------------------------
 require('events').EventEmitter.defaultMaxListeners = 50;
 
-// Required
+// Required Files
+//-----------------------------------------------------------------
 var Customer = require("./javascript/bamazonCustomer");
 var Manager = require("./javascript/bamazonManager");
+
+// Node Package Managers (NPM)
+//-----------------------------------------------------------------
 var inquirer = require("inquirer");
-var fs = require('fs');
 var table = require("table");
 var mysql = require("mysql");
-
+var fs = require('fs');
 
 // Create SQL Database Connection
+//-----------------------------------------------------------------
 var connection = mysql.createConnection({
     host: "localhost",
 
@@ -30,15 +36,16 @@ var connection = mysql.createConnection({
     database: "bamazon_DB"
 });
 
-// Connect to the mysql server and sql database
+// Connect to the MySQL server and SQL database
+//-----------------------------------------------------------------
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + connection.threadId);
     mainMenu();
-    // connection.end();
 });
 
-// mainMenu()
+// mainMenu() function
+//-----------------------------------------------------------------
 function mainMenu() {
     console.clear();
     console.log("---------MY STORE--------")
@@ -70,14 +77,16 @@ function mainMenu() {
         });
 }
 
-// storeCustomer()
+// storeCustomer() function
+//-----------------------------------------------------------------
 function storeCustomer() {
     console.clear();
     console.log("---------CUSTOMERS--------")
     mainMenu()
 }
 
-// storeEmployee()
+// storeEmployee() function
+//-----------------------------------------------------------------
 function storeEmployee() {
     console.clear();
     console.log("---------EMPLOYEES--------")
@@ -109,21 +118,24 @@ function storeEmployee() {
         });
 }
 
-// storeManager()
+// storeManager() function
+//-----------------------------------------------------------------
 function storeManager() {
     console.clear();
     console.log("Hello Store Manager");
     mainMenu()
 }
 
-// storeSupervisor()
+// storeSupervisor() function
+//-----------------------------------------------------------------
 function storeSupervisor() {
     console.clear();
     console.log("Hello Store Supervisor");
     mainMenu()
 }
 
-// exit()
+// exit() function
+//-----------------------------------------------------------------
 function exit() {
     connection.end();
     process.exit(0);
