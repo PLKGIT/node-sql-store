@@ -9,9 +9,9 @@ TBD.
 
 ### Technologies Used
   * Node JS v12.13.0
-  * Node SQL NPM
-  * Table NPM
-  * Inquirer Node Package Manager (NPM) v7.0.4"
+  * Inquirer Node Package Manager (NPM) v7.0.4
+  * MySQL NPM v2.18.1
+  * Table NPM v5.4.6
 
 ### Using MyStore
 TBD.
