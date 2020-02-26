@@ -1,0 +1,30 @@
+{
+  "name": "sql-store",
+  "version": "1.0.0",
+  "description": "Node application for an Amazon-like store.",
+  "main": "bamazonStore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLKGIT/node-sql-store.git"
+  },
+  "keywords": [
+    "Node",
+    "MySQL",
+    "and",
+    "Inquirer."
+  ],
+  "author": "Pam Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PLKGIT/node-sql-store/issues"
+  },
+  "homepage": "https://github.com/PLKGIT/node-sql-store#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4",
+    "mysql": "^2.18.1",
+    "table": "^5.4.6"
+  }
+}
