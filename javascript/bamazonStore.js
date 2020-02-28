@@ -8,13 +8,13 @@ require('events').EventEmitter.defaultMaxListeners = 50;
 
 // Required Files
 //-----------------------------------------------------------------
-var Customer = require("./javascript/bamazonCustomer");
-var Manager = require("./javascript/bamazonManager");
+var Customer = require("./bamazonCustomer");
+var Manager = require("./bamazonManager");
 
 // Node Package Managers (NPM)
 //-----------------------------------------------------------------
 var inquirer = require("inquirer");
-var table = require("table");
+var Table = require('cli-table');
 var mysql = require("mysql");
 var fs = require('fs');
 
@@ -43,6 +43,21 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId);
     mainMenu();
 });
+
+function readProducts() {
+    connection.query("SELECT product_name, price FROM product ORDER BY price", function (err, res) {
+        if (err) throw err;
+        var table = new Table({
+            head: ['Product', 'Price']
+        });
+
+        for (i = 0; i < res.length; i++) {
+            table.push([res[i].product_name, res[i].price])
+        };
+        console.log(table.toString());
+        connection.end();
+    });
+}
 
 // mainMenu() function
 //-----------------------------------------------------------------
@@ -82,7 +97,57 @@ function mainMenu() {
 function storeCustomer() {
     console.clear();
     console.log("---------CUSTOMERS--------")
-    mainMenu()
+    connection.query("SELECT product_name, price FROM product ORDER BY price", function (err, res) {
+        if (err) throw err;
+        var table = new Table({
+            head: ['Product', 'Price']
+        });
+
+        for (i = 0; i < res.length; i++) {
+            table.push([res[i].product_name, res[i].price])
+        };
+        console.log(table.toString());
+    });
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "What is the ID of the product that you would like to purchase?",
+                name: "product_id"
+            },
+            {
+                type: "input",
+                message: "How many would you like to purchase?",
+                name: "stock_quantity"
+            }
+        ])
+        .then(function (answer) {
+            var pid = answer.product_id;
+            console.log(pid);
+            var qty = answer.stock_quantity;
+            console.log(qty);
+
+            var query = connection.query(
+                "SELECT * FROM product WHERE item_id=?", [pid],function (err, res) {
+                    if (err) throw err;
+                    console.log(res);
+                    console.log(res.RowDataPacket.stock_quantity);
+
+                    if (res.stock_quantity > qty){
+                        console.log("purchase ok");
+                    } else {
+                        console.log("sorry, not enough stock");
+                    };
+                }
+
+            );
+
+           
+            // logs the actual query being run
+            console.log("Got it!");
+            connection.end();
+        });
+
 }
 
 // storeEmployee() function

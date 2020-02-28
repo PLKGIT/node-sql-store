@@ -1,7 +1,7 @@
 {
   "name": "sql-store",
   "version": "1.0.0",
-  "description": "Node application for an Amazon-like store.",
+  "description": "SQL Store",
   "main": "bamazonStore.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/PLKGIT/node-sql-store#readme",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "inquirer": "^7.0.4",
     "mysql": "^2.18.1",
-    "table": "^5.4.6"
   }
 }
