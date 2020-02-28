@@ -1,8 +1,8 @@
 {
-  "name": "sql-store",
+  "name": "node-sql-store",
   "version": "1.0.0",
-  "description": "SQL Store",
-  "main": "bamazonStore.js",
+  "description": "Bootcamp Homework #10",
+  "main": "bamazonCustomer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,9 +12,9 @@
   },
   "keywords": [
     "Node",
-    "MySQL",
+    "SQL",
     "and",
-    "Inquirer."
+    "Inquirer"
   ],
   "author": "Pam Kelly",
   "license": "ISC",
@@ -24,7 +24,8 @@
   "homepage": "https://github.com/PLKGIT/node-sql-store#readme",
   "dependencies": {
     "cli-table": "^0.3.1",
+    "fund": "^1.0.0",
     "inquirer": "^7.0.4",
-    "mysql": "^2.18.1",
+    "mysql": "^2.18.1"
   }
 }
