@@ -2,19 +2,33 @@
 Bootcamp Homework #10
 
 ## Overview
-This project creates an Amazon-like storefront and application using Node and MySQL. The app takes in orders from customers and depletes stock from the store's inventory. It will also track product sales across the store's department and provide a summary of the highest-grossing departments in the store.
+This project creates an Amazon-like storefront and application using Node and MySQL. The app takes in orders from customers and depletes stock from the store's inventory. The app includes a component that allows a manager to manage inventory. It also a supervisor to track product sales across the store's departments and provide a summary of the highest-grossing store departments.
 
 ### Features
-TBD.
+1. bamazonCustomer.js
+  * On launch, displays available products for sale
+  * Allows customers to purchase available products
+  * Allows customers to display available products for sale
+2. bamazonManager.js
+  * Allows managers to display available products for sale
+  * Allows managers to find products with low inventory (fewer than 5 in stock)
+  * Allows managers to add to a product's inventory
+  * Allows managers to add products
+3. bamazonSupervisor.js
+  * Allows supervisors to view product sales by Department
+  * Allows supervisors to create new Departments
 
 ### Technologies Used
   * Node JS v12.13.0
   * Inquirer Node Package Manager (NPM) v7.0.4
   * MySQL NPM v2.18.1
-  * Table NPM v5.4.6
+  * CLI-Table NPM v3.1
 
 ### Using MyStore
-TBD.
+Use the following commands to launch the Customer, Manager, and Supervisor components of the MyStore application:
+* node bamazonCustomer
+* node bamazonManager
+* node bamazonSupervisor
 
 ### MyStore Results
 MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for a video demonstrating the working application. 
