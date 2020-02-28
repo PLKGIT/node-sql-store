@@ -12,33 +12,34 @@ DROP TABLE IF EXISTS product;
 CREATE TABLE product (
     item_id INTEGER NOT NULL AUTO_INCREMENT,
     product_name VARCHAR(100) NOT NULL,
-    department_name VARCHAR(100) NOT NULL,
+    department_id INTEGER(3) NOT NULL,
     price DECIMAL(10 , 2 ) NOT NULL,
     stock_quantity INTEGER(10),
+    sales DECIMAL(10 , 2 ),
     PRIMARY KEY (item_id)
 );
 
 -- Add products to the Product Table --
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Sony Television", "Electronics",199.99, 100);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Samsung Television", "Electronics",179.99, 75);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("LG Television", "Electronics",129.99, 50);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("MacBook", "Electronics",799.99, 120);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("MacBook Pro", "Electronics",1099.99, 150);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Football", "Sports",29.99, 50);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Baseball","Sports", 19.99, 75);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Basketball","Sports", 49.99, 100);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Blanket","Bedding", 39.99, 25);
-INSERT INTO product  (product_name, department_name, price, stock_quantity)
-VALUES ("Spread","Bedding", 19.99, 55);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Sony Television", 3,199.99, 100,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Samsung Television", 3,179.99, 75,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("LG Television", 3,129.99, 50,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("MacBook", 3,799.99, 120,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("MacBook Pro", 3,1099.99, 150,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Football", 5,29.99, 50,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Baseball",5, 19.99, 75,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Basketball",5, 49.99, 100,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Blanket",2, 39.99, 25,0);
+INSERT INTO product  (product_name, department_id, price, stock_quantity,sales)
+VALUES ("Spread",2, 19.99, 55,0);
 
 
 -- Drops the Department Table if it exists currently --
@@ -48,17 +49,17 @@ CREATE TABLE department (
     department_id INTEGER NOT NULL AUTO_INCREMENT,
     department_name VARCHAR(100) NOT NULL,
     over_head_costs DECIMAL(10 , 2 ) NOT NULL,
-    product_sales DECIMAL(10 , 2 ) NOT NULL,
-    total_profit DECIMAL(10 , 2 ) NOT NULL,
     PRIMARY KEY (department_id)
 );
 
 -- Add Departments to the Department Table --
-INSERT INTO department (department_name, over_head_costs,product_sales,total_profit)
-VALUES ("Electronics", 10000, 20000,10000);
-INSERT INTO department (department_name, over_head_costs,product_sales,total_profit)
-VALUES ("Clothing", 60000, 100000,40000);
-INSERT INTO department (department_name, over_head_costs,product_sales,total_profit)
-VALUES ("Bedding", 50000, 200000,150000);
-INSERT INTO department (department_name, over_head_costs,product_sales,total_profit)
-VALUES ("Sports", 30000, 500000,470000);
+INSERT INTO department (department_name, over_head_costs)
+VALUES ("Bedding", 30000);
+INSERT INTO department (department_name, over_head_costs)
+VALUES ("Clothing", 40000);
+INSERT INTO department (department_name, over_head_costs)
+VALUES ("Electronics", 100000);
+INSERT INTO department (department_name, over_head_costs)
+VALUES ("Furniture", 75000);
+INSERT INTO department (department_name, over_head_costs)
+VALUES ("Sports", 25000);

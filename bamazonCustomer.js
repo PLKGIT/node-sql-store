@@ -97,7 +97,7 @@ function purchaseProducts() {
         .then(function (answer) {
             var pid = answer.item_id;
             var qty = answer.stock;
-            connection.query("SELECT item_id,product_name,price,stock_quantity FROM product WHERE item_id=?", [pid], function (err, results, fields) {
+            connection.query("SELECT item_id,product_name,price,stock_quantity,sales FROM product WHERE item_id=?", [pid], function (err, results, fields) {
                 if (err) {
                     return console.log('error:' + err.message);
                 }
@@ -105,10 +105,12 @@ function purchaseProducts() {
                     var remaining = results[0].stock_quantity - qty;
                     var total = results[0].price * qty;
                     var formatTotal = numberWithCommas(total.toFixed(2));
+                    var sales = results[0].sales + parseInt(formatTotal);
                     connection.query("UPDATE product SET ? WHERE ?",
                         [
                             {
-                                stock_quantity: remaining
+                                stock_quantity: remaining,
+                                sales: sales
                             },
                             {
                                 item_id: pid

@@ -122,16 +122,35 @@ function addProducts() {
         ])
         .then(function (answer) {
             var product_name = answer.product;
-            var department_name = answer.department;
             var price = answer.price;
             var stock_quantity = answer.stock;
+            var department_id=0;
+            switch (answer.department) {
+                case "Bedding":
+                  department_id =1 ;
+                  break;
+                case "Clothing":
+                  department_id = 2;
+                  break;
+                case "Electronics":
+                  department_id = 3;
+                  break;
+                case "Furniture":
+                  department_id = 4;
+                  break;
+                case "Sports":
+                  department_id = 5;
+                  break;
+              }
+        
             console.log("Adding " + product_name + "(s)...");
             connection.query("INSERT INTO product SET ?",
                 {
                     product_name: product_name,
-                    department_name: department_name,
+                    department_id: department_id,
                     price: price,
-                    stock_quantity: stock_quantity
+                    stock_quantity: stock_quantity,
+                    sales: 0
                 },
 
                 function (err, result, fields) {
