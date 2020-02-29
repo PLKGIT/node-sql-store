@@ -101,16 +101,17 @@ function purchaseProducts() {
                 if (err) {
                     return console.log('error:' + err.message);
                 }
-                if (results[0].stock_quantity > qty) {
+                if (results[0].stock_quantity >= qty) {
                     var remaining = results[0].stock_quantity - qty;
                     var total = results[0].price * qty;
+                    var sales = results[0].sales
                     var formatTotal = numberWithCommas(total.toFixed(2));
-                    var sales = results[0].sales + parseInt(formatTotal);
+                    var salesTotal = sales + total;
                     connection.query("UPDATE product SET ? WHERE ?",
                         [
                             {
                                 stock_quantity: remaining,
-                                sales: sales
+                                sales: salesTotal
                             },
                             {
                                 item_id: pid
