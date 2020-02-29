@@ -57,7 +57,7 @@ Full-Stack Coding Bootcamp through UCB Extension
 #### Display Results
 [README Link](https://plkgit.github.io/node-sql-store/) at https://plkgit.github.io/node-sql-store/
 
-#### Word Guess on Portfolios
+#### Node SQL Store on Portfolios
 [Professional Porfolio](https://www.pamkelly.com/portdev.html) at https://www.pamkelly.com/portdev.html
 
 [Bootstrap Portfolio](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html

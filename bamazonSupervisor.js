@@ -47,7 +47,7 @@ async function waitView() {
 }
 
 async function waitAdd() {
-    await new Promise(resolve => setTimeout(resolve, 20000));
+    await new Promise(resolve => setTimeout(resolve, 10000));
     viewDepartments();
 }
 
