@@ -35,8 +35,16 @@ Use the following commands to launch the Customer, Manager, and Supervisor compo
 ### MyStore Results
 MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for a video demonstrating the working application. 
 
+Customer Results Video:
+
 ![Customer Results](images/mystore_customer_results.gif)
+
+Manager Results Video:
+
 ![Manager Results](images/mystore_manager_results.gif)
+
+Supervisor Results Video:
+
 ![Supervisor Results](images/mystore_supervisor_results.gif)
 
 ## Completed Assignment
