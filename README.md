@@ -11,17 +11,19 @@ This project creates an Amazon-like storefront and application using Node and My
   * Allows customers to display available products for sale
 2. bamazonManager.js
   * Allows managers to display available products for sale
+  * Allows managers to add products
   * Allows managers to find products with low inventory (fewer than 5 in stock)
   * Allows managers to add to a product's inventory
-  * Allows managers to add products
 3. bamazonSupervisor.js
-  * Allows supervisors to view product sales by Department
-  * Allows supervisors to create new Departments
+  * Allows supervisors to view Product Sales by Department
+  * Allows supervisors to view Department list
+  * Allows supervisors to add new Departments
+  * Allows managers to display available products for sale
 
 ### Technologies Used
   * Node JS v12.13.0
-  * Inquirer Node Package Manager (NPM) v7.0.4
   * MySQL NPM v2.18.1
+  * Inquirer Node Package Manager (NPM) v7.0.4
   * CLI-Table NPM v3.1
 
 ### Using MyStore
@@ -33,7 +35,9 @@ Use the following commands to launch the Customer, Manager, and Supervisor compo
 ### MyStore Results
 MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for a video demonstrating the working application. 
 
-![results](images/store_application_results.gif)
+![Customer Results](images/mystore_customer_results.gif)
+![Manager Results](images/mystore_manager_results.gif)
+![Supervisor Results](images/mystore_supervisor_results.gif)
 
 ## Completed Assignment
 
