@@ -33,7 +33,7 @@ Use the following commands to launch the Customer, Manager, and Supervisor compo
 * node bamazonSupervisor
 
 ### MyStore Results
-MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for videos demonstrating the components of the working application.  Click **[Schema](https://github.com/PLKGIT/node-sql-store/blob/master/sql/schema.sql){:target="_blank"}** or **[Seed](https://github.com/PLKGIT/node-sql-store/blob/master/sql/seed.sql){:target="_blank"}** for access to the SQL scripts for the application.
+MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for videos demonstrating the components of the working application.  Click **[Schema](https://github.com/PLKGIT/node-sql-store/blob/master/sql/schema.sql){:target="_blank"}** or **[Seed](https://github.com/PLKGIT/node-sql-store/blob/master/sql/seeds.sql){:target="_blank"}** for access to the SQL scripts for the application.
 
 **Customer Results Video:**
 
