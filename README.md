@@ -1,8 +1,7 @@
-# Node.js & MySQL Assignment: Amazon-Style Store
-Bootcamp Homework #10
+# Amazon-Style Store
 
 ## Overview
-This project creates an Amazon-like storefront and application using Node and MySQL. The app takes in orders from customers and depletes stock from the store's inventory. The app includes a component that allows a manager to manage inventory. It also a supervisor to track product sales across the store's departments and provide a summary of the highest-grossing store departments.
+This is an Amazon-like storefront and application using Node and MySQL. It takes in orders from customers and depletes stock from the store's inventory and includes a component that allows a manager to manage inventory. Finally, it has a component that allows Supervisors to track product sales across the store's departments and provide a summary of the highest-grossing store departments.
 
 ### Features
 1. bamazonCustomer.js
@@ -20,12 +19,6 @@ This project creates an Amazon-like storefront and application using Node and My
   * Allows supervisors to add new Departments
   * Allows managers to display available products for sale
 
-### Technologies Used
-  * Node JS v12.13.0
-  * MySQL NPM v2.18.1
-  * Inquirer Node Package Manager (NPM) v7.0.4
-  * CLI-Table NPM v3.1
-
 ### Using MyStore
 Use the following commands to launch the Customer, Manager, and Supervisor components of the MyStore application:
 * node bamazonCustomer
@@ -34,6 +27,13 @@ Use the following commands to launch the Customer, Manager, and Supervisor compo
 
 ### MyStore Results
 MyStore is a command line application; accordingly, it cannot be run in a web browser.  See below for videos demonstrating the components of the working application.  Click **[Schema](https://github.com/PLKGIT/node-sql-store/blob/master/sql/schema.sql){:target="_blank"}** or **[Seed](https://github.com/PLKGIT/node-sql-store/blob/master/sql/seeds.sql){:target="_blank"}** for access to the SQL scripts for the application.
+
+### Technologies
+  * Node JS v12.13.0
+  * MySQL NPM v2.18.1
+  * Inquirer Node Package Manager (NPM) v7.0.4
+  * CLI-Table NPM v3.1
+
 
 **Customer Results Video:**
 
@@ -47,28 +47,18 @@ MyStore is a command line application; accordingly, it cannot be run in a web br
 
 ![Supervisor Results](images/mystore_supervisor_results.gif)
 
-## Completed Assignment
+## Development Details
 
-### Due
-Sunday, March 1, 2020
-
-### Student
+### Developer
 Pam Kelly at [esq.kelly@gmail.com](mailto:esq.kelly@gmail.com)
 
-Full-Stack Coding Bootcamp through UCB Extension
-
-### Completed Assignment URLs
-
-#### Github repository
-[Github Link](https://github.com/PLKGIT/node-sql-store) at https://github.com/PLKGIT/node-sql-store
+### GitHub Repository
+[GitHub](https://github.com/PLKGIT/node-sql-store) at https://github.com/PLKGIT/node-sql-store
 
 #### Display Results
-[README Link](https://plkgit.github.io/node-sql-store/) at https://plkgit.github.io/node-sql-store/
+[README](https://plkgit.github.io/node-sql-store/) at https://plkgit.github.io/node-sql-store/
 
 #### Node SQL Store on Portfolios
 [Professional Porfolio](https://www.pamkelly.com/portdev.html) at https://www.pamkelly.com/portdev.html
-
-[Bootstrap Portfolio](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html
-
 
 Copyright &copy; 2020 Pamela L. Kelly
